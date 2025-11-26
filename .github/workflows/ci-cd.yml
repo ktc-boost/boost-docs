@@ -83,28 +83,7 @@ jobs:
               state: 'closed'
             });
 
-      # Build/Test 통과 시 PR 승인 + develop 머지
-      - name: Approve & Merge PR if build/test passes
-        if: ${{ success() && github.event_name == 'pull_request' }}
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const pr = ${{ github.event.pull_request.number }};
-            await github.rest.pulls.createReview({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: pr,
-              body: 'CI 통과, develop로 자동 머지합니다.',
-              event: 'APPROVE'
-            });
-            await github.rest.pulls.merge({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: pr
-            });
-
-  # 2️⃣ Preview 배포 (feature/*, fix/*, refactor/*, style/*, develop PR)
+  # 2️⃣ Preview 배포 (feat/*, fix/*, refactor/*, style/*, develop PR)
   deploy-preview:
     if: ${{ !startsWith(github.ref, 'refs/heads/main') }}
     needs: build
