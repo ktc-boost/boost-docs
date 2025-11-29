@@ -1,0 +1,13 @@
+# 모든 텍스트 파일 LF로 통일
+* text=auto eol=lf
+*.ts text
+*.tsx text
+*.js text
+*.jsx text
+*.css text
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.woff binary
+*.woff2 binary

@@ -1,11 +1,3 @@
----
-name: 🚀 Pull Request
-about: 기능, 리팩토링, 스타일 등 작업 후 PR 작성 시 사용하는 템플릿
-title: "🚀 "
-labels: ""
-assignees: ""
----
-
 ## 🔍 한 줄 요약
 
 <!-- 변경된 부분을 간단히 요약해주세요. -->

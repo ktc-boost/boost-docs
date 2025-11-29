@@ -1,7 +1,7 @@
 ---
-name: 🎨 Style
+name: 💄 Style
 about: UI/UX 또는 스타일 관련 작업 시 작성하는 템플릿
-title: "🎨 "
+title: "💄 "
 labels: style
 assignees: ""
 ---
