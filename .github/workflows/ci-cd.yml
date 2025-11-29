@@ -9,6 +9,7 @@ on:
       - "fix/**"
       - "refactor/**"
       - "style/**"
+      - "release/**"
   pull_request:
     branches:
       - develop
