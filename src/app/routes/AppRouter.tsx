@@ -1,29 +1,30 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ROUTE_PATH } from "@/app/routes/routeConstants";
 
-import OverviewPage from "@/pages/overview/Overview";
-import ResourcesPage from "@/pages/overview/Resources";
-import MembersPage from "@/pages/overview/Members";
+import ProjectOverviewPage from "@/pages/overview/ProjectOverview";
+import TeamResourcesPage from "@/pages/overview/TeamResources";
+import TeamMembersPage from "@/pages/overview/TeamMembers";
 
-import EnvironmentPage from "@/pages/onboarding/Environment";
-import SetupPage from "@/pages/onboarding/Setup";
-import RunPage from "@/pages/onboarding/Run";
-import StructurePage from "@/pages/onboarding/Structure";
-import OnboardingResourcesPage from "@/pages/onboarding/Resources";
+import FrontendOnboardingPage from "@/pages/onboarding/FrontendOnboarding";
+import BackendOnboardingPage from "@/pages/onboarding/BackendOnboarding";
 
-import WorkflowPage from "@/pages/dev-guide/Workflow";
-import GitPage from "@/pages/dev-guide/Git";
-import ReviewPage from "@/pages/dev-guide/Review";
-import TestPage from "@/pages/dev-guide/Test";
+import CommonDevGuidePage from "@/pages/dev-guide/CommonDevGuide";
+import FrontendDevGuidePage from "@/pages/dev-guide/FrontendDevGuide";
+import BackendDevGuidePage from "@/pages/dev-guide/BackendDevGuide";
 
-import FrontendIntroPage from "@/pages/frontend/Intro";
-import DesignSystemPage from "@/pages/frontend/DesignSystem";
-import TechStackPage from "@/pages/frontend/TechStack";
-import FrontendIssuesPage from "@/pages/frontend/Issues";
+import FrontendGettingStartPage from "@/pages/frontend/GettingStart";
+import FrontenDesignSystemPage from "@/pages/frontend/DesignSystem";
+import FrontendKeyFeaturesPage from "@/pages/frontend/KeyFeatures";
+import FrontendTechStackPage from "@/pages/frontend/TechStack";
+import FrontendTroubleShootingPage from "@/pages/frontend/TroubleShooting";
+import FrontendPerformancePage from "@/pages/frontend/Performance";
+import FrontendCiCdPage from "@/pages/frontend/CiCd";
 
-import BackendArchPage from "@/pages/backend/Architecture";
-import BackendERDPage from "@/pages/backend/Erd";
-import BackendIssuesPage from "@/pages/backend/Issues";
+import BackendErdPage from "@/pages/backend/Erd";
+import BackendArchitecturePage from "@/pages/backend/Architecture";
+import BackendTroubleShootingPage from "@/pages/backend/TroubleShooting";
+import BackendPerformancePage from "@/pages/backend/Performance";
+import BackendTechStackPage from "@/pages/backend/TechStack";
 
 import DeployCIPage from "@/pages/deployment/Ci";
 import DeployCDPage from "@/pages/deployment/Cd";
@@ -40,35 +41,84 @@ const router = createBrowserRouter([
     path: "/",
     element: <AppLayout />,
     children: [
-      { path: ROUTE_PATH.OVERVIEW_PROJECT_OVERVIEW, element: <OverviewPage /> },
-      { path: ROUTE_PATH.OVERVIEW_RESOURCES, element: <ResourcesPage /> },
-      { path: ROUTE_PATH.OVERVIEW_MEMBERS, element: <MembersPage /> },
+      // 프로젝트 개요
+      { path: ROUTE_PATH.OVERVIEW.PROJECT, element: <ProjectOverviewPage /> },
+      { path: ROUTE_PATH.OVERVIEW.RESOURCES, element: <TeamResourcesPage /> },
+      { path: ROUTE_PATH.OVERVIEW.MEMBERS, element: <TeamMembersPage /> },
 
-      { path: ROUTE_PATH.ONBOARDING_ENV, element: <EnvironmentPage /> },
-      { path: ROUTE_PATH.ONBOARDING_SETUP, element: <SetupPage /> },
-      { path: ROUTE_PATH.ONBOARDING_RUN, element: <RunPage /> },
-      { path: ROUTE_PATH.ONBOARDING_STRUCTURE, element: <StructurePage /> },
+      // 온보딩 가이드
       {
-        path: ROUTE_PATH.ONBOARDING_RESOURCES,
-        element: <OnboardingResourcesPage />,
+        path: ROUTE_PATH.ONBOARDING.FRONTEND,
+        element: <FrontendOnboardingPage />,
+      },
+      {
+        path: ROUTE_PATH.ONBOARDING.BACKEND,
+        element: <BackendOnboardingPage />,
       },
 
-      { path: ROUTE_PATH.PROCESS_WORKFLOW, element: <WorkflowPage /> },
-      { path: ROUTE_PATH.PROCESS_GIT, element: <GitPage /> },
-      { path: ROUTE_PATH.PROCESS_REVIEW, element: <ReviewPage /> },
-      { path: ROUTE_PATH.PROCESS_TEST, element: <TestPage /> },
+      // 개발 가이드
+      {
+        path: ROUTE_PATH.DEVELOPER_GUIDE.COMMON,
+        element: <CommonDevGuidePage />,
+      },
+      {
+        path: ROUTE_PATH.DEVELOPER_GUIDE.FRONTEND,
+        element: <FrontendDevGuidePage />,
+      },
+      {
+        path: ROUTE_PATH.DEVELOPER_GUIDE.BACKEND,
+        element: <BackendDevGuidePage />,
+      },
 
-      { path: ROUTE_PATH.FRONTEND_INTRO, element: <FrontendIntroPage /> },
-      { path: ROUTE_PATH.FRONTEND_DESIGN, element: <DesignSystemPage /> },
-      { path: ROUTE_PATH.FRONTEND_TECHSTACK, element: <TechStackPage /> },
-      { path: ROUTE_PATH.FRONTEND_ISSUES, element: <FrontendIssuesPage /> },
+      // 프론트엔드 문서
+      {
+        path: ROUTE_PATH.FRONTEND.GETTING_STARTED,
+        element: <FrontendGettingStartPage />,
+      },
+      {
+        path: ROUTE_PATH.FRONTEND.DESIGN,
+        element: <FrontenDesignSystemPage />,
+      },
+      {
+        path: ROUTE_PATH.FRONTEND.TECHSTACK,
+        element: <FrontendTechStackPage />,
+      },
+      {
+        path: ROUTE_PATH.FRONTEND.KEY_FEATURES,
+        element: <FrontendKeyFeaturesPage />,
+      },
+      {
+        path: ROUTE_PATH.FRONTEND.TROUBLE_SHOOTING,
+        element: <FrontendTroubleShootingPage />,
+      },
+      {
+        path: ROUTE_PATH.FRONTEND.PERFORMANCE,
+        element: <FrontendPerformancePage />,
+      },
+      {
+        path: ROUTE_PATH.FRONTEND.CICD,
+        element: <FrontendCiCdPage />,
+      },
 
-      { path: ROUTE_PATH.BACKEND_ARCH, element: <BackendArchPage /> },
-      { path: ROUTE_PATH.BACKEND_ERD, element: <BackendERDPage /> },
-      { path: ROUTE_PATH.BACKEND_ISSUES, element: <BackendIssuesPage /> },
+      // 백엔드 문서
+      {
+        path: ROUTE_PATH.BACKEND.ARCHITECTURE,
+        element: <BackendArchitecturePage />,
+      },
+      { path: ROUTE_PATH.BACKEND.TECHSTACK, element: <BackendTechStackPage /> },
+      { path: ROUTE_PATH.BACKEND.ERD, element: <BackendErdPage /> },
+      {
+        path: ROUTE_PATH.BACKEND.TROUBLE_SHOOTING,
+        element: <BackendTroubleShootingPage />,
+      },
+      {
+        path: ROUTE_PATH.BACKEND.PERFORMANCE,
+        element: <BackendPerformancePage />,
+      },
 
-      { path: ROUTE_PATH.DEPLOY_CI, element: <DeployCIPage /> },
-      { path: ROUTE_PATH.DEPLOY_CD, element: <DeployCDPage /> },
+      // 배포 프로세스
+      { path: ROUTE_PATH.DEPLOYMENT.CI, element: <DeployCIPage /> },
+      { path: ROUTE_PATH.DEPLOYMENT.CD, element: <DeployCDPage /> },
     ],
   },
 ]);
