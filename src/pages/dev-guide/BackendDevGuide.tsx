@@ -1,8 +1,8 @@
 import AnimatedTextBlock from "@/shared/components/animations/AnimatedTextBlock";
 import { PageDescriptions } from "@/shared/constants/pageDescriptions";
 
-const FrontenDesignSystemPage = () => {
-  return <AnimatedTextBlock items={PageDescriptions.FRONTED.DESIGN} />;
+const BackendDevGuidePage = () => {
+  return <AnimatedTextBlock items={PageDescriptions.DEV_GUIDE.BACKEND} />;
 };
 
-export default FrontenDesignSystemPage;
+export default BackendDevGuidePage;

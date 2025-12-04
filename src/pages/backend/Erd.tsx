@@ -1,5 +1,8 @@
-const ErdPage = () => {
-  return <div>Backend - Erd 페이지</div>;
+import AnimatedTextBlock from "@/shared/components/animations/AnimatedTextBlock";
+import { PageDescriptions } from "@/shared/constants/pageDescriptions";
+
+const BackendErdPage = () => {
+  return <AnimatedTextBlock items={PageDescriptions.BACKEND.ERD} />;
 };
 
-export default ErdPage;
+export default BackendErdPage;

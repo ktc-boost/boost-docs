@@ -1,5 +1,8 @@
+import AnimatedTextBlock from "@/shared/components/animations/AnimatedTextBlock";
+import { PageDescriptions } from "@/shared/constants/pageDescriptions";
+
 const DeployCDPage = () => {
-  return <div>Deploy - Cd 페이지</div>;
+  return <AnimatedTextBlock items={PageDescriptions.DEPLOYMENT.CD} />;
 };
 
 export default DeployCDPage;
