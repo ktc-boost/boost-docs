@@ -1,5 +1,8 @@
+import AnimatedTextBlock from "@/shared/components/animations/AnimatedTextBlock";
+import { PageDescriptions } from "@/shared/constants/pageDescriptions";
+
 const DeployCIPage = () => {
-  return <div>Deploy - Ci 페이지</div>;
+  return <AnimatedTextBlock items={PageDescriptions.DEPLOYMENT.CI} />;
 };
 
 export default DeployCIPage;

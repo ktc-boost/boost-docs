@@ -1,5 +1,8 @@
+import AnimatedTextBlock from "@/shared/components/animations/AnimatedTextBlock";
+import { PageDescriptions } from "@/shared/constants/pageDescriptions";
+
 const FrontendTechStackPage = () => {
-  return <div>Frontend - TechStackPage 페이지</div>;
+  return <AnimatedTextBlock items={PageDescriptions.FRONTED.TECH_STACK} />;
 };
 
 export default FrontendTechStackPage;

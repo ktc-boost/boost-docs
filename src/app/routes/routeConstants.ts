@@ -1,59 +1,43 @@
 export const ROUTE_PATH = {
   ROOT: "/",
 
-  OVERVIEW_PROJECT_OVERVIEW: "/overview/project-overview",
-  OVERVIEW_RESOURCES: "/overview/resources",
-  OVERVIEW_MEMBERS: "/overview/members",
+  OVERVIEW: {
+    PROJECT: "/overview/project-overview",
+    RESOURCES: "/overview/team-resources",
+    MEMBERS: "/overview/team-members",
+  },
 
-  ONBOARDING_ENV: "/onboarding/environment",
-  ONBOARDING_SETUP: "/onboarding/setup",
-  ONBOARDING_RUN: "/onboarding/run",
-  ONBOARDING_STRUCTURE: "/onboarding/structure",
-  ONBOARDING_RESOURCES: "/onboarding/resources",
+  ONBOARDING: {
+    FRONTEND: "/onboarding/frontend",
+    BACKEND: "/onboarding/backend",
+  },
 
-  PROCESS_WORKFLOW: "/process/workflow",
-  PROCESS_GIT: "/process/git",
-  PROCESS_REVIEW: "/process/review",
-  PROCESS_TEST: "/process/test",
+  DEVELOPER_GUIDE: {
+    COMMON: "/developer-guide/common",
+    FRONTEND: "/developer-guide/frontend",
+    BACKEND: "/developer-guide/backend",
+  },
 
-  FRONTEND_INTRO: "/frontend/intro",
-  FRONTEND_DESIGN: "/frontend/design-system",
-  FRONTEND_TECHSTACK: "/frontend/tech-stack",
-  FRONTEND_ISSUES: "/frontend/issues",
+  FRONTEND: {
+    GETTING_STARTED: "/frontend/getting-start",
+    DESIGN: "/frontend/design-system",
+    TECHSTACK: "/frontend/tech-stack",
+    KEY_FEATURES: "/frontend/key-features",
+    TROUBLE_SHOOTING: "/frontend/trouble-shooting",
+    PERFORMANCE: "/frontend/performance-optimization",
+    CICD: "/frontend/ci-cd",
+  },
 
-  BACKEND_ARCH: "/backend/architecture",
-  BACKEND_ERD: "/backend/erd",
-  BACKEND_ISSUES: "/backend/issues",
+  BACKEND: {
+    ARCHITECTURE: "/backend/architecture",
+    ERD: "/backend/erd",
+    TECHSTACK: "/backend/tech-stack",
+    TROUBLE_SHOOTING: "/backend/trouble-shooting",
+    PERFORMANCE: "/backend/performance-optimization",
+  },
 
-  DEPLOY_CI: "/deployment/ci",
-  DEPLOY_CD: "/deployment/cd",
-};
-
-export const ROUTES = {
-  OVERVIEW: () => ROUTE_PATH.OVERVIEW_PROJECT_OVERVIEW,
-  OVERVIEW_RESOURCES: () => ROUTE_PATH.OVERVIEW_RESOURCES,
-  OVERVIEW_MEMBERS: () => ROUTE_PATH.OVERVIEW_MEMBERS,
-
-  ONBOARDING_ENV: () => ROUTE_PATH.ONBOARDING_ENV,
-  ONBOARDING_SETUP: () => ROUTE_PATH.ONBOARDING_SETUP,
-  ONBOARDING_RUN: () => ROUTE_PATH.ONBOARDING_RUN,
-  ONBOARDING_STRUCTURE: () => ROUTE_PATH.ONBOARDING_STRUCTURE,
-  ONBOARDING_RESOURCES: () => ROUTE_PATH.ONBOARDING_RESOURCES,
-
-  PROCESS_WORKFLOW: () => ROUTE_PATH.PROCESS_WORKFLOW,
-  PROCESS_GIT: () => ROUTE_PATH.PROCESS_GIT,
-  PROCESS_REVIEW: () => ROUTE_PATH.PROCESS_REVIEW,
-  PROCESS_TEST: () => ROUTE_PATH.PROCESS_TEST,
-
-  FRONTEND_INTRO: () => ROUTE_PATH.FRONTEND_INTRO,
-  FRONTEND_DESIGN: () => ROUTE_PATH.FRONTEND_DESIGN,
-  FRONTEND_TECHSTACK: () => ROUTE_PATH.FRONTEND_TECHSTACK,
-  FRONTEND_ISSUES: () => ROUTE_PATH.FRONTEND_ISSUES,
-
-  BACKEND_ARCH: () => ROUTE_PATH.BACKEND_ARCH,
-  BACKEND_ERD: () => ROUTE_PATH.BACKEND_ERD,
-  BACKEND_ISSUES: () => ROUTE_PATH.BACKEND_ISSUES,
-
-  DEPLOY_CI: () => ROUTE_PATH.DEPLOY_CI,
-  DEPLOY_CD: () => ROUTE_PATH.DEPLOY_CD,
+  DEPLOYMENT: {
+    CI: "/deployment/ci",
+    CD: "/deployment/cd",
+  },
 };

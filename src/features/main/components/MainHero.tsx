@@ -4,7 +4,7 @@ import { ROUTE_PATH } from "@/app/routes/routeConstants";
 
 const MainHero = () => {
   const navigate = useNavigate();
-  const goToOverview = () => navigate(ROUTE_PATH.OVERVIEW_PROJECT_OVERVIEW);
+  const goToOverview = () => navigate(ROUTE_PATH.OVERVIEW.PROJECT);
 
   return (
     <section

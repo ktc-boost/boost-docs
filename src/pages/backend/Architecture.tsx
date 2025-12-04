@@ -1,5 +1,8 @@
-const ArchitecturePage = () => {
-  return <div>Backend - Architecture 페이지</div>;
+import AnimatedTextBlock from "@/shared/components/animations/AnimatedTextBlock";
+import { PageDescriptions } from "@/shared/constants/pageDescriptions";
+
+const BackendArchitecturePage = () => {
+  return <AnimatedTextBlock items={PageDescriptions.BACKEND.ARCHITECTURE} />;
 };
 
-export default ArchitecturePage;
+export default BackendArchitecturePage;
