@@ -19,8 +19,8 @@ const MainHero = () => {
 
         <p className="text-gray-600 text-lg sm:text-xl max-w-2xl leading-relaxed">
           Boost 프로젝트 개발 문서에 오신 것을 환영합니다.
-          <br /> 현재 디자인은 임시이며, 더 예쁘고 완성도 있게 개선될
-          예정입니다!
+          <br /> 현재 디자인은 임시입니다. 더 예쁘고 완성도 있게 개선될
+          예정이에요!
         </p>
 
         <div className="mt-2">
